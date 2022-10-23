@@ -2,6 +2,7 @@ package com.example.multimodule.application;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.google.common.collect.ImmutableSet;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class DemoApplicationTest {
 
 	@Test
 	public void contextLoads() {
+
+		System.out.println(ImmutableSet.of(1, 2, 3));
+
 		assertThat(myService.message() + "meh").isNotNull();
 	}
 

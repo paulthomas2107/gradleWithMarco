@@ -1,7 +1,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.6.3' apply false
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-	id 'java'
+	id 'java-library'
     id 'maven-publish'
 }
 
@@ -20,6 +20,12 @@ dependencyManagement {
 }
 
 dependencies {
+
+	api ("com.google.guava:guava:31.1-jre")
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
 }
